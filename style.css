@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #252734, #000000);
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  padding: 35px 40px;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(15px);
+  background: rgb(33, 33, 34);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: right;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid rgb(44, 42, 42);
+  background: rgba(5, 5, 5, 0.35);
+  color: rgb(187, 181, 181);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 8px;
+}
+
+button {
+  height: 60px;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, #8b8a88, #484845);
+  backdrop-filter: blur(20px);
+  color: rgb(10, 10, 10);
+  border-radius: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active { transform: scale(0.95); filter: brightness(0.7);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3a3a39, #494947);
+}
+
+.ac {
+  background: linear-gradient(135deg, #e3a84f, #f37703);
+}
+
+.ac:hover {
+  background: linear-gradient(135deg, #c6892d, #f37703)
+}
+
+.equal {
+  background: linear-gradient(135deg, #21e43b, #0a6922);
+  color: white;
+}
+
+.equal:hover {
+  background: linear-gradient(135deg, #25af38, #0a6922);
+}
+
+.nzero {
+  grid-column: span 2;
+  border-radius: 8px;
+  text-align: left;
+  padding-left: 22px;
+}
+
+.sym {
+  background: linear-gradient(135deg, #d0ccc9, #61615c);
+}
+
+.sym:hover {
+  background: linear-gradient(135deg, #5a5857, #4a4a48);
+}
+  
+
+@media (max-width: 500px) {
+
+  .calculator {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  button {
+    height: 55px;
+    font-size: 18px;
+  }
+
+  #display {
+    height: 60px;
+    font-size: 24px;
+  }
+}
